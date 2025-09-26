@@ -1,0 +1,4 @@
+.env
+.DS_Store
+__pycache__/main.cpython-311.pyc
+__pycache__/database.cpython-311.pyc
