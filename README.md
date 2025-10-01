@@ -1,4 +1,4 @@
-# Vulnerable AI Student Assitant
+# Vulnerable AI Student Assistant
 A vulnerable AI app for testing purposes
 
 ## INSTRUCTIONS
