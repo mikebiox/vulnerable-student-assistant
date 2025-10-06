@@ -1,4 +1,4 @@
-# Vulnerable AI Student Assitant
+# Vulnerable AI Student Assistant
 A vulnerable AI app for testing purposes
 
 ## INSTRUCTIONS
@@ -10,8 +10,6 @@ A vulnerable AI app for testing purposes
 4. Make sure you are in the right directory
 5. Run: pip install -r requirements.txt
 6. Run: uvicorn main:app --reload
-
-
 
 ## PROMPT TO INITIALIZE THE APP USING GEMINI CLI (~5 mins)
 Create a chat application called "Student Assistant" that uses the Gemini 2.0 Flash model to answer questions. The application will have a simple, single-page HTML/CSS/JS frontend and a Python backend using FastAPI.
