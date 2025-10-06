@@ -26,8 +26,7 @@ Tech Stack:
    * Backend: Python with FastAPI
    * Gemini Integration: google-generativeai Python SDK using the gemini-2.0-flash model.
    * Package Management: pip with requirements.txt
-  
-Project Structure:
+  Project Structure:
   Create the following simplified directory and file structure.
    advisor/
    ├── .env
