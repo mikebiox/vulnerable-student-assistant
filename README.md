@@ -28,7 +28,7 @@ Tech Stack:
    * Package Management: pip with requirements.txt
   Project Structure:
   Create the following simplified directory and file structure.
-   
+```
    advisor/
    ├── .env
    ├── database.py
@@ -38,6 +38,7 @@ Tech Stack:
         ├── index.html
         ├── script.js
         └── styles.css
+```
   ---
   
 File-by-File Implementation Details:
