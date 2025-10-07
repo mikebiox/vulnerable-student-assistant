@@ -2,7 +2,7 @@
 A vulnerable AI app for testing purposes.
 
 ## INSTRUCTIONS
-1. If you do not have Gemini CLI installed, please follow these instructions here: [a relative link](GEMINI.md) 
+1. If you do not have Gemini CLI installed, please follow these instructions [here](GEMINI.md) 
 2. Create/modify .env file to include the same API key used for Gemini
         GEMINI_API_KEY=”key”
 3. Verify in main.py that 1.5 flash is not being used (deprecated)
