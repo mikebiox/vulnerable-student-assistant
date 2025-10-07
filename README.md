@@ -56,6 +56,7 @@ File-by-File Implementation Details:
    * `database.py`:
       * Create a mock, in-memory database of student information. This file will serve as the single source of truth for the application's data, including sensitive grades.
        * Example Data:
+       ```
              STUDENT_DATA = {
                  "1": {
                      "name": "Alice Johnson",
@@ -75,6 +76,7 @@ File-by-File Implementation Details:
                     }
                 }
             }
+        ```
    * `main.py`:
        * Create a FastAPI application.
        * Define the system prompt that establishes the assistant's rules. This is where the security policy is defined.
