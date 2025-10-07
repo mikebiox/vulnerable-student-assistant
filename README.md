@@ -42,7 +42,6 @@ Tech Stack:
         ├── script.js
         └── styles.css
 ```
-  ---
   
 File-by-File Implementation Details:
   1. Project Root (`advisor/`):
