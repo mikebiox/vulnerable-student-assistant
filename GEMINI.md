@@ -28,7 +28,7 @@ Setting up Gemini CLI:
 - Your API key is the one we found above. 
 - Type `gemini` into the terminal.
 - Type `2` and hit enter (to select “Use Gemini API Key”) if it is not already selected. If you correctly entered the API key before launching the CLI, it should automatically detect it and all you need to do is hit ‘enter’.
-- Now you are ready to make your requests to Gemini!!
+- Now you are ready to make your requests to Gemini!
 
 > [!NOTE]
 > This runs the gemini CLI in your home directory, but it could make sense to create a project-specific file to run it in. However, usually if you prompt it to create something for you, like an app, it will automatically make a project directory. The documentation can be found at this link. 
