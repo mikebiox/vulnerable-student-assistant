@@ -1,15 +1,16 @@
 # Vulnerable AI Student Assistant
-A vulnerable AI app for testing purposes
+A vulnerable AI app for testing purposes.
 
 ## INSTRUCTIONS
-1. Create/modify .env file to include the same API key used for Gemini
+1. If you do not have Gemini CLI installed, please follow these instructions here: [a relative link](GEMINI.md) 
+2. Create/modify .env file to include the same API key used for Gemini
         GEMINI_API_KEY=”key”
-2. Verify in main.py that 1.5 flash is not being used (deprecated)
+3. Verify in main.py that 1.5 flash is not being used (deprecated)
         Use gemini-2.0-flash
-3. Open terminal in IDE
-4. Make sure you are in the right directory
-5. Run: pip install -r requirements.txt
-6. Run: uvicorn main:app --reload
+4. Open terminal in IDE
+5. Make sure you are in the right directory
+6. Run: pip install -r requirements.txt
+7. Run: uvicorn main:app --reload
 
 ## PROMPT TO INITIALIZE THE APP USING GEMINI CLI (~5 mins)
 > [!NOTE]
