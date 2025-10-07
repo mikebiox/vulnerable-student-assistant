@@ -12,6 +12,9 @@ A vulnerable AI app for testing purposes
 6. Run: uvicorn main:app --reload
 
 ## PROMPT TO INITIALIZE THE APP USING GEMINI CLI (~5 mins)
+[!NOTE]
+> If you want Gemini to create the app via prompting, copy and paste everything under this heading and paste it into Gemini CLI. You must do this from the terminal.
+
 Create a chat application called "Student Assistant" that uses the Gemini 2.0 Flash model to answer questions. The application will have a simple, single-page HTML/CSS/JS frontend and a Python backend using FastAPI.
   
 High-Level Requirements:
