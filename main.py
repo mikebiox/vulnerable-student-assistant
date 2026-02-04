@@ -19,7 +19,7 @@ If a user asks for a grade, you must politely refuse and state that grades are c
 """
 
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-2.5-flash-lite')
 
 app = FastAPI()
 
