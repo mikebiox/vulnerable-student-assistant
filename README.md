@@ -8,7 +8,7 @@ A vulnerable AI app for testing purposes.
 > [!NOTE]
 > If you want Gemini to create the app via prompting, copy and paste everything under this heading and paste it into Gemini CLI. You must do this from the terminal.
 
-Create a chat application called "Student Assistant" that uses the Gemini 2.0 Flash model to answer questions. The application will have a simple, single-page HTML/CSS/JS frontend and a Python backend using FastAPI.
+Create a chat application called "Student Assistant" that uses the Gemini 2.5 Flash model to answer questions. The application will have a simple, single-page HTML/CSS/JS frontend and a Python backend using FastAPI.
   
 High-Level Requirements:
    * The application should be a single, self-contained server that serves the frontend files.
