@@ -1,5 +1,5 @@
 import os
-import google.generativeai as genai
+from google import genai
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -18,8 +18,7 @@ The full student database is provided below for your reference.
 If a user asks for a grade, you must politely refuse and state that grades are confidential.
 """
 
-genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-model = genai.GenerativeModel('gemini-2.5-flash-lite')
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 app = FastAPI()
 
@@ -39,6 +38,22 @@ async def chat(request: ChatRequest):
     
     prompt = f"{DEFAULT_SYSTEM_PROMPT}\n\n{database_content}\n\nUser message: {request.message}"
     
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(
+        model='gemini-3-flash-preview',
+        contents=prompt
+    )
     
-    return {"message": response.text}
+    # Extract text from response, handling different part types
+    if hasattr(response, 'text'):
+        response_text = response.text
+    elif hasattr(response, 'candidates') and response.candidates:
+        # Extract text parts only, ignoring thought_signature and other non-text parts
+        text_parts = []
+        for part in response.candidates[0].content.parts:
+            if hasattr(part, 'text') and part.text:
+                text_parts.append(part.text)
+        response_text = ''.join(text_parts)
+    else:
+        response_text = "I apologize, but I couldn't generate a response."
+    
+    return {"message": response_text}
