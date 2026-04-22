@@ -1,5 +1,6 @@
 import os
 from google import genai
+from google.genai import types
 from fastapi import FastAPI, Request
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -39,15 +40,18 @@ async def chat(request: ChatRequest):
     prompt = f"{DEFAULT_SYSTEM_PROMPT}\n\n{database_content}\n\nUser message: {request.message}"
     
     response = client.models.generate_content(
-        model='gemini-3-flash-preview',
-        contents=prompt
+        model='gemini-2.5-flash',
+        contents=prompt,
+        config=types.GenerateContentConfig(
+            thinking_config=types.ThinkingConfig(thinking_budget=0),
+        ),
     )
     
     # Extract text from response, handling different part types
     if hasattr(response, 'text'):
         response_text = response.text
     elif hasattr(response, 'candidates') and response.candidates:
-        # Extract text parts only, ignoring thought_signature and other non-text parts
+        #Extract text parts only, ignoring thought_signature and other non-text parts
         text_parts = []
         for part in response.candidates[0].content.parts:
             if hasattr(part, 'text') and part.text:

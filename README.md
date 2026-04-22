@@ -27,7 +27,7 @@ Tech Stack:
 ```
    advisor/
    ├── .env
-   ├── database.json
+   ├── database.py
    ├── main.py
    ├── requirements.txt
    └── static/
@@ -48,7 +48,7 @@ File-by-File Implementation Details:
             uvicorn
             python-dotenv
             google-genai
-   * `database.json`:
+   * `database.py`:
       * Create a mock, in-memory database of student information. This file will serve as the single source of truth for the application's data, including sensitive grades.
        * Example Data:
        ```
